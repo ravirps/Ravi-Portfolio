@@ -15,7 +15,11 @@ app.set('view engine', 'hbs')
 
 //routing
 app.use(express.static(public_path))
-
+app.get('/download', function(req, res){
+    const file = `${__dirname}/resource/Ravi_SDE_IITBHU.pdf`;
+    res.download(file); 
+    // Set disposition and send it.
+  });
 // app.get('',(req,resp)=>{
 //     resp.send('index') 
 // })
@@ -43,5 +47,5 @@ app.use(express.static(public_path))
 //     resp.send("about page") 
 // })
 
- 
-app.listen(portNo)
+ app.listen(8800)
+// app.listen(portNo)
