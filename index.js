@@ -3,7 +3,7 @@ const fs=require('fs');
 const path = require("path"); 
 const os=require("os"); 
 const express=require("express"); 
- 
+const portNo= process.env.PORT
 
 const app=express();
 
@@ -44,4 +44,4 @@ app.use(express.static(public_path))
 // })
 
  
-app.listen(8800)
+app.listen(portNo)
