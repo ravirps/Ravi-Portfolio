@@ -3,7 +3,7 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Kelvin - Bootstrap Resume Template</title>
+  <title>Ravi IIT-BHU </title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
@@ -21,6 +21,9 @@
 
   <!-- Libraries CSS Files -->
   <link href="lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+
+  <!-- jquery cdn -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 
   <!-- Main Stylesheet File -->
   <link href="css/style.css" rel="stylesheet">
@@ -338,6 +341,26 @@
           <br>
         </div>
 
+        <div class="col-lg-3 col-lg-offset-3 centered">
+          <img class="skill-icon" src="./img/git.png">
+          <canvas id="git" height="130" width="130"></canvas>
+          <p>GIT</p>
+          <br>
+        </div>
+        <div class="col-lg-3 centered">
+          <img class="skill-icon" src="./img/jquery.webp">
+          <canvas id="jquery" height="130" width="130"></canvas>
+          <p>jquery</p>
+          <br>
+        </div>
+
+        <div class="col-lg-3 centered">
+          <img class="skill-icon" src="./img/java.png">
+          <canvas id="java" height="130" width="130"></canvas>
+          <p>JAVA</p>
+          <br>
+        </div>
+
 
       </div>
       <!--/.row -->
@@ -483,7 +506,7 @@
               <div class="sent-message">Your message has been sent. Thank you!</div>
 
               <div class="form-send">
-                <button type="submit" class="btn btn-large">Send Message</button>
+                <button type="submit" id ="submitbutton" class="btn btn-large">Send Message</button>
               </div>
 
             </form>

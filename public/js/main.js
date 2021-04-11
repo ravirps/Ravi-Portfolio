@@ -89,4 +89,48 @@ jQuery(document).ready(function( $ ) {
   }
   ];
   var myDoughnut = new Chart(document.getElementById("nodejs").getContext("2d")).Doughnut(doughnutData);
+  var doughnutData = [{
+    value: 50,
+    color: "#1abc9c"
+  },
+  {
+    value: 50,
+    color: "#ecf0f1"
+  }
+  ];
+  var myDoughnut = new Chart(document.getElementById("git").getContext("2d")).Doughnut(doughnutData);
+  var doughnutData = [{
+    value: 50,
+    color: "#1abc9c"
+  },
+  {
+    value: 50,
+    color: "#ecf0f1"
+  }
+  ];
+  var myDoughnut = new Chart(document.getElementById("java").getContext("2d")).Doughnut(doughnutData);
+  var doughnutData = [{
+    value: 50,
+    color: "#1abc9c"
+  },
+  {
+    value: 50,
+    color: "#ecf0f1"
+  }
+  ];
+  var myDoughnut = new Chart(document.getElementById("jquery").getContext("2d")).Doughnut(doughnutData);
+
+  $('#submitbutton').click(()=>{
+      let message="name: "+$('#contact-name').val()+"  ";
+      message+="Email: "+$('#contact-email').val()+"  ";
+      message+="subject: "+$('#contact-subject').val()+"  ";
+      message+="message: "+$('#contact-message').val()+"  ";
+      
+      $.get("https://api.callmebot.com/whatsapp.php?phone=+918601065279&text="+message+"&apikey=823407", function(data, status){
+        alert("message sent \n"+message);
+
+      });
+      
+  });
+
 });
