@@ -20,6 +20,18 @@ app.get('/download', function(req, res){
     res.download(file); 
     // Set disposition and send it.
   });
+app.get('/sendmessage',function(req,res){
+  console.log("sending "+req.query.message)
+  request('https://api.callmebot.com/whatsapp.php?phone=+918601065279&text='+req.query.message+'&apikey=823407', function (error, response, body) {
+   if(error)
+   {
+     res.send(error)
+   }
+   else{
+     res.send(body)
+   }
+});
+})
 // app.get('',(req,resp)=>{
 //     resp.send('index') 
 // })
@@ -47,5 +59,5 @@ app.get('/download', function(req, res){
 //     resp.send("about page") 
 // })
 
-//  app.listen(8800)
-app.listen(portNo)
+ app.listen(8800)
+// app.listen(portNo)
